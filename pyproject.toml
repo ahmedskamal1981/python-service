@@ -14,7 +14,6 @@ pillow = "^10.3.0"
 pytesseract = "^0.3.10"
 pymupdf = "^1.24.2"
 dspy-ai = "^2.4.1"
-
 [tool.poetry.group.dev.dependencies]
 # Dev tools only (not core app deps)
 black = "^24.4.2"

@@ -423,19 +423,6 @@ files = [
 colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
 [[package]]
-name = "cloudpickle"
-version = "3.1.1"
-description = "Pickler class to extend the standard pickle.Pickler functionality"
-optional = false
-python-versions = ">=3.8"
-groups = ["main"]
-markers = "python_version == \"3.11\""
-files = [
-    {file = "cloudpickle-3.1.1-py3-none-any.whl", hash = "sha256:c8c5a44295039331ee9dad40ba100a9c7297b6f988e50e87ccdf3765a668350e"},
-    {file = "cloudpickle-3.1.1.tar.gz", hash = "sha256:b216fa8ae4019d5482a8ac3c95d8f6346115d8835911fd4aefd1a445e4242c64"},
-]
-
-[[package]]
 name = "colorama"
 version = "0.4.6"
 description = "Cross-platform colored terminal text."
@@ -577,7 +564,6 @@ description = "DSPy"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
-markers = "python_version >= \"3.12\""
 files = [
     {file = "dspy-2.5.42-py3-none-any.whl", hash = "sha256:cdd61c499462fba86e666c080effe041bea929bbaa57abe05281d02980c0fd79"},
     {file = "dspy-2.5.42.tar.gz", hash = "sha256:fa66ab0e21b9601533e9aa92856fcd3a8091b32625179495d63b95d1d3e1ecdb"},
@@ -625,59 +611,12 @@ snowflake = ["snowflake-snowpark-python"]
 weaviate = ["weaviate-client (>=4.6.5,<4.7.0)"]
 
 [[package]]
-name = "dspy"
-version = "2.6.27"
-description = "DSPy"
-optional = false
-python-versions = "<3.14,>=3.9"
-groups = ["main"]
-markers = "python_version == \"3.11\""
-files = [
-    {file = "dspy-2.6.27-py3-none-any.whl", hash = "sha256:54e55fd6999b6a46e09b0e49e8c4b71be7dd56a881e66f7a60b8d657650c1a74"},
-    {file = "dspy-2.6.27.tar.gz", hash = "sha256:de1c4f6f6d127e0efed894e1915dac40f5d5623e7f1cf3d749c98d790066477a"},
-]
-
-[package.dependencies]
-anyio = "*"
-asyncer = "0.0.8"
-backoff = ">=2.2"
-cachetools = ">=5.5.0"
-cloudpickle = ">=3.0.0"
-datasets = ">=2.14.6"
-diskcache = ">=5.6.0"
-joblib = ">=1.3,<2.0"
-json-repair = ">=0.30.0"
-litellm = ">=1.60.3"
-magicattr = ">=0.1.6"
-numpy = {version = ">=1.26.0", markers = "python_version >= \"3.10\""}
-openai = ">=0.28.1"
-optuna = ">=3.4.0"
-pandas = ">=2.1.1"
-pydantic = ">=2.0"
-regex = ">=2023.10.3"
-requests = ">=2.31.0"
-rich = ">=13.7.1"
-tenacity = ">=8.2.3"
-tqdm = ">=4.66.1"
-ujson = ">=5.8.0"
-
-[package.extras]
-anthropic = ["anthropic (>=0.18.0,<1.0.0)"]
-aws = ["boto3 (>=1.34.78,<1.35.0)"]
-dev = ["build (>=1.0.3)", "datamodel_code_generator (>=0.26.3)", "litellm (>=1.60.3) ; sys_platform == \"win32\"", "litellm[proxy] (>=1.60.3) ; sys_platform != \"win32\"", "pillow (>=10.1.0)", "pre-commit (>=3.7.0)", "pytest (>=6.2.5)", "pytest-asyncio (>=0.26.0)", "pytest-mock (>=3.12.0)", "ruff (>=0.3.0)"]
-langchain = ["langchain_core"]
-mcp = ["mcp ; python_version >= \"3.10\""]
-test-extras = ["langchain_core", "mcp ; python_version >= \"3.10\""]
-weaviate = ["weaviate-client (>=4.5.4,<4.6.0)"]
-
-[[package]]
 name = "dspy-ai"
 version = "2.5.43"
 description = "DSPy"
 optional = false
 python-versions = ">=3.9"
 groups = ["main"]
-markers = "python_version >= \"3.12\""
 files = [
     {file = "dspy-ai-2.5.43.tar.gz", hash = "sha256:873026e148baac0055c2acd8fef16e8503bbc77f713ca9549f4580f95b3c1e5a"},
     {file = "dspy_ai-2.5.43-py3-none-any.whl", hash = "sha256:b1209baf24816a425c23173af036667792f343fe6c95973f524d3b425fb66498"},
@@ -685,22 +624,6 @@ files = [
 
 [package.dependencies]
 dspy = ">=2.5.3"
-
-[[package]]
-name = "dspy-ai"
-version = "2.6.27"
-description = "DSPy"
-optional = false
-python-versions = ">=3.9"
-groups = ["main"]
-markers = "python_version == \"3.11\""
-files = [
-    {file = "dspy_ai-2.6.27-py3-none-any.whl", hash = "sha256:e7d4d3328dd05098efbedbd72d1c324a2317e4693638eb8755926c9ff0f64861"},
-    {file = "dspy_ai-2.6.27.tar.gz", hash = "sha256:93d363e2ceb3745554133c8849e3eea356653707a6760eadfb9533d7d9e5f330"},
-]
-
-[package.dependencies]
-dspy = ">=2.6.5"
 
 [[package]]
 name = "email-validator"
@@ -1410,7 +1333,6 @@ description = "Library to easily interface with LLM API providers"
 optional = false
 python-versions = "!=2.7.*,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,!=3.7.*,>=3.8"
 groups = ["main"]
-markers = "python_version >= \"3.12\""
 files = [
     {file = "litellm-1.51.0-py3-none-any.whl", hash = "sha256:0b2c20d116834166c8440e5698d7d927dbcc78fcaa08ce0c5cbea2d0de55ec6c"},
     {file = "litellm-1.51.0.tar.gz", hash = "sha256:8bf648677ee145a8fe5054a2e3f3a34895b9ab65a6015e4b94efca7ef406f466"},
@@ -1432,38 +1354,6 @@ tokenizers = "*"
 [package.extras]
 extra-proxy = ["azure-identity (>=1.15.0,<2.0.0)", "azure-keyvault-secrets (>=4.8.0,<5.0.0)", "google-cloud-kms (>=2.21.3,<3.0.0)", "prisma (==0.11.0)", "resend (>=0.8.0,<0.9.0)"]
 proxy = ["PyJWT (>=2.8.0,<3.0.0)", "apscheduler (>=3.10.4,<4.0.0)", "backoff", "cryptography (>=42.0.5,<43.0.0)", "fastapi (>=0.111.0,<0.112.0)", "fastapi-sso (>=0.10.0,<0.11.0)", "gunicorn (>=22.0.0,<23.0.0)", "orjson (>=3.9.7,<4.0.0)", "pynacl (>=1.5.0,<2.0.0)", "python-multipart (>=0.0.9,<0.0.10)", "pyyaml (>=6.0.1,<7.0.0)", "rq", "uvicorn (>=0.22.0,<0.23.0)"]
-
-[[package]]
-name = "litellm"
-version = "1.73.6"
-description = "Library to easily interface with LLM API providers"
-optional = false
-python-versions = "!=2.7.*,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,!=3.7.*,>=3.8"
-groups = ["main"]
-markers = "python_version == \"3.11\""
-files = [
-    {file = "litellm-1.73.6-py3-none-any.whl", hash = "sha256:98b3c7f436e6521e280f98faf9bad06c4c76d6a1678db2b370ffa175c206d288"},
-    {file = "litellm-1.73.6.tar.gz", hash = "sha256:072ff9225aaa9caafe0fa9782df0ba4c93f893791cc55dd5ed218a401e788e88"},
-]
-
-[package.dependencies]
-aiohttp = ">=3.10"
-click = "*"
-httpx = ">=0.23.0"
-importlib-metadata = ">=6.8.0"
-jinja2 = ">=3.1.2,<4.0.0"
-jsonschema = ">=4.22.0,<5.0.0"
-openai = ">=1.68.2"
-pydantic = ">=2.0.0,<3.0.0"
-python-dotenv = ">=0.2.0"
-tiktoken = ">=0.7.0"
-tokenizers = "*"
-
-[package.extras]
-caching = ["diskcache (>=5.6.1,<6.0.0)"]
-extra-proxy = ["azure-identity (>=1.15.0,<2.0.0)", "azure-keyvault-secrets (>=4.8.0,<5.0.0)", "google-cloud-kms (>=2.21.3,<3.0.0)", "prisma (==0.11.0)", "redisvl (>=0.4.1,<0.5.0) ; python_version >= \"3.9\" and python_version < \"3.14\"", "resend (>=0.8.0,<0.9.0)"]
-proxy = ["PyJWT (>=2.8.0,<3.0.0)", "apscheduler (>=3.10.4,<4.0.0)", "backoff", "boto3 (==1.34.34)", "cryptography (>=43.0.1,<44.0.0)", "fastapi (>=0.115.5,<0.116.0)", "fastapi-sso (>=0.16.0,<0.17.0)", "gunicorn (>=23.0.0,<24.0.0)", "litellm-enterprise (==0.1.9)", "litellm-proxy-extras (==0.2.6)", "mcp (==1.9.3) ; python_version >= \"3.10\"", "orjson (>=3.9.7,<4.0.0)", "pynacl (>=1.5.0,<2.0.0)", "python-multipart (>=0.0.18,<0.0.19)", "pyyaml (>=6.0.1,<7.0.0)", "rich (==13.7.1)", "rq", "uvicorn (>=0.29.0,<0.30.0)", "uvloop (>=0.21.0,<0.22.0) ; sys_platform != \"win32\"", "websockets (>=13.1.0,<14.0.0)"]
-utils = ["numpydoc"]
 
 [[package]]
 name = "magicattr"
