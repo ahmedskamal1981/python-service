@@ -22,7 +22,7 @@ RUN curl -sSL https://install.python-poetry.org | python3 - && \
     ln -s /root/.local/bin/poetry /usr/local/bin/poetry
 
 # Copy only dependency files first for better caching
-COPY pyproject.toml poetry.lock ./
+COPY pyproject.toml ./
 
 # Install project dependencies
 RUN poetry config virtualenvs.create false \
