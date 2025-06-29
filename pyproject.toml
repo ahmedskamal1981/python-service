@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "python-service"
+version = "0.1.0"
+description = "A FastAPI service for OCR and inference using PyMuPDF, Tesseract, and dspy."
+authors = ["Your Name <you@example.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.111.0"
+uvicorn = { extras = ["standard"], version = "^0.29.0" }
+pydantic = "^2.7.1"
+pillow = "^10.3.0"
+pytesseract = "^0.3.10"
+pymupdf = "^1.24.2"
+dspy-ai = "^2.4.1"
+
+[tool.poetry.group.dev.dependencies]
+# Dev tools only (not core app deps)
+black = "^24.4.2"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
