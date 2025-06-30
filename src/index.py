@@ -1,7 +1,7 @@
 import fitz
 import dspy
 import pytesseract
-from PIL import Image
+from PIL import Image, ImageOps
 from typing import List
 from pydantic import BaseModel, Field
 from fastapi import FastAPI, UploadFile, File
@@ -96,6 +96,13 @@ def read_pdf(path):
 
 def read_image(path):
     img = Image.open(path)
+    img = ImageOps.exif_transpose(img)
+    img = img.convert("RGB")
+    # Save as PNG
+    png_path = path.rsplit(".", 1)[0] + ".png"
+    img.save(png_path, format="PNG")
+
+    img = Image.open(png_path)
     text = pytesseract.image_to_string(img)
     result = faithfulness(calculations=text)
     return [{
